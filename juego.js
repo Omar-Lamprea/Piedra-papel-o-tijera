@@ -4,22 +4,24 @@ const scissors = document.getElementById('op3');
 const result = document.getElementById('result');
 let z;
 
-result.textContent = '.'
+result.textContent = ''
 
-z = aleatorio(1 , 3);
-function aleatorio(min, maxi){
-	const resultado = Math.floor(Math.random() * (maxi - min + 1)) + min;
-	return resultado;
-}
 
 rock.addEventListener('click', piedra)
 paper.addEventListener('click', papel)
 scissors.addEventListener('click', tijeras)
 
 function piedra(){
+
+	z = aleatorio(1 , 3);
+	function aleatorio(min, maxi){
+	const resultado = Math.floor(Math.random() * (maxi - min + 1)) + min;
+	return resultado;
+	}
+
 	if (z == 1){
-	result.textContent = 'piedra:empate'
-}
+	result.textContent = 'piedra: empate'
+	}
 	else if (z == 2){
 		result.textContent ='papel: derrota'
 	}
@@ -29,25 +31,39 @@ function piedra(){
 }
 
 function papel(){
+
+	z = aleatorio(1 , 3);
+	function aleatorio(min, maxi){
+	const resultado = Math.floor(Math.random() * (maxi - min + 1)) + min;
+	return resultado;
+	}
+
 	if (z == 1){
-	result.textContent = z + ' victoria'
-}
+	result.textContent = ' piedra: victoria'
+	}
 	else if (z == 2){
-		result.textContent = z + ' empate'
+		result.textContent = 'papel: empate'
 	}
 	else{
-		result.textContent = z + ' derrota'
+		result.textContent = 'tijeras: derrota'
 	}
 }
 
 function tijeras(){
+
+	z = aleatorio(1 , 3);
+	function aleatorio(min, maxi){
+	const resultado = Math.floor(Math.random() * (maxi - min + 1)) + min;
+	return resultado;
+	}
+
 	if (z == 1){
-	result.textContent = z + ' derrota'
-}
+	result.textContent = 'piedra: derrota'
+	}
 	else if (z == 2){
-		result.textContent = z + ' victoria'
+		result.textContent = 'papel: victoria'
 	}
 	else{
-		result.textContent = z + ' empate'
+		result.textContent = 'tijeras: empate'
 	}
 }

@@ -4,6 +4,14 @@ body{
 	background-size: cover;
 	background-position: bottom;
 }
+h2{
+	color: white;
+}
+p{
+	font-size: 3em;
+	color: white;
+}
+
 .container{
 	display: flex;
 	flex-direction: column;
@@ -16,5 +24,29 @@ body{
 .container-game{
 	display: grid;
 	justify-content: center;
-	grid-template-columns: 20% 40% 20%
+	align-items: center;
+	grid-template-columns: 20% 40% 20%;
+	background: #00000070;
+	border-radius:20px;
+	margin: 0 3em;
+}
+.user, .game-machine, .result{
+	/*border: 1px solid red;*/
+}
+.buttons{
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	margin: auto;
+}
+.buttons button{
+	margin: 10px 0;
+	border: none;
+	background: transparent;
+}
+.image img{
+	width: 50px;
+}
+.result{
+	font-size: 20px;
 }
